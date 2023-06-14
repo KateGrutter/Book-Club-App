@@ -22,8 +22,6 @@ export function PostForm(props: { onSubmitForm: (post: Post) => void} ) {
         <div className="post-form">
             
             <form onSubmit={handleFormSubmit}>
-            
-            <input type="text" value={userName} onChange={e => setUserName(e.target.value)} />
 
             <textarea value={thought} onChange={e => setThought(e.target.value)}></textarea>
             <button>Post</button>

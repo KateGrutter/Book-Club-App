@@ -11,12 +11,13 @@ export function DiscussionBoard() {
     return (
         
         <div className="discussion-posts">
+            <PostForm onSubmitForm={(newPost: Post) => setPosts([...posts, newPost])}></PostForm>
             <div className="post-container">
                 {
                     posts.map((post, i) => <UserPost post={post} key={i}></UserPost>)
                 }
             </div>
-            <PostForm onSubmitForm={(newPost: Post) => setPosts([...posts, newPost])}></PostForm>
+           
         </div>
     )
 }
