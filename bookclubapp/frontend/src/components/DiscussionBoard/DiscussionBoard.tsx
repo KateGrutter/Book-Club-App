@@ -2,6 +2,7 @@ import { useState } from "react"
 import { Post } from "../../models/Post"
 import { PostForm } from "./PostForm"
 import { UserPost } from "./UserPost"
+import Modal from "react-modal"
 
 
 export function DiscussionBoard() {
