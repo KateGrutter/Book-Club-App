@@ -3,5 +3,5 @@ export interface User {
     firstName: string,
     lastName: string,
     memberSince: string,
-    username: string
+    userName: string
 }
