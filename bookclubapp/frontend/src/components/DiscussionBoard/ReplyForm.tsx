@@ -1,10 +1,11 @@
+
 import { useState } from "react";
 import { Post } from "../../models/Post";
 
 
 
 
-export function PostForm(props: { onSubmitForm: (post: Post) => void} ) {
+export function ReplyForm(props: { onSubmitForm: (post: Post) => void, onClose: () => void} ) {
     const [userName, setUserName] = useState('');
     const [thought, setThought] = useState('');
 
@@ -14,8 +15,9 @@ export function PostForm(props: { onSubmitForm: (post: Post) => void} ) {
         const post = {
             userName, thought
         };
-        setThought('');
+        
         props.onSubmitForm(post);
+        props.onClose()
     }
     
     return(
